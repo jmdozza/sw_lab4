@@ -33,19 +33,19 @@ This laboratory focuses on implementing and analyzing **Structural Architectural
 We can identify four components and three connectors in the cyc view:
 
 ### Components
-* ***component-2***: This component acts as the prododucer in our broker-pattern example. It is in charge of establish a connection to rabbitmq server, create a queue and send messages to be enqueued.
+* ***component-2***: This component acts as the producer in our broker-pattern example. It is in charge of establish a connection to rabbitmq server, create a queue and send messages to be enqueued.
 
-* ***component-1***:This component corresponds to a broker.This works as an intermediary that facilitates message exchanges. We use rabbit mq to implement this component and is build through docker. This component acts as a central commmunication point, allowing producers (component-2) to send messages to queues, where consumers (component-3) can process them ***asynchcorously***.
+* ***component-1***:This component corresponds to a broker.This works as an intermediary that facilitates message exchanges. We use rabbit mq to implement this component and is build through docker. This component acts as a central communication point, allowing producers (component-2) to send messages to queues, where consumers (component-3) can process them ***asynchcorously***.
 
 * ***component-3***: This component takes the role of consumer. It will consume message from the queue that is located at the component-1. Besides that it also will save the consumed messages in a nosql db.
 
 * ***component-4***: This is a database component and it is in charge of save the messages sent by component-3.
 
 ### Connectors:
-* ***AMQP Connector***: This connector is present two times in the architecture. It implements AMQP protocol which provides a set of rules for message formatting, routing, and delivery, ensuring consistency across various implementations. We can see this connector between component-2(producer) and component-1(broker) and component-1(broker) and component-3(consumer.)
+* ***AMQP Connector***: This connector is present two times in the architecture. It implements AMQP protocol which provides a set of rules for message formatting, routing, and delivery, ensuring consistency across various implementations. We can see this connector between component-2(producer) and component-1(broker) and component-1(broker) and component-3(consumer).
 
 <div align="center">
-  <img src="images/cyc.png" alt="Component and Connector View" width="100">
+  <img src="images/cyc.png" alt="Component and Connector View" width="200">
 </div>
 
 ### Data Flow Diagram
