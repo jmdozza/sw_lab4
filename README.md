@@ -45,7 +45,7 @@ We can identify four components and three connectors in the cyc view:
 * ***AMQP Connector***: This connector is present two times in the architecture. It implements AMQP protocol which provides a set of rules for message formatting, routing, and delivery, ensuring consistency across various implementations. We can see this connector between component-2(producer) and component-1(broker) and component-1(broker) and component-3(consumer.)
 
 <div align="center">
-  <img src="images/cyc.png" alt="Component and Connector View" width="800">
+  <img src="images/cyc.png" alt="Component and Connector View" width="200">
 </div>
 
 ### Data Flow Diagram
