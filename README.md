@@ -16,7 +16,7 @@
 ## 📋 Table of Contents
 - [Overview](#overview)
 - [Component and Connector View](#component-and-connector-view-cc)
-- [Data Flow Diagram](#data-flow-diagram)
+- [Flow Diagram](#flow-diagram)
 
 
 ---
@@ -48,7 +48,7 @@ We can identify four components and three connectors in the cyc view:
   <img src="images/cyc.png" alt="Component and Connector View" width="200">
 </div>
 
-### Data Flow Diagram
+### Flow Diagram
 This diagram shows the asynchronous communication flow between system components,as you can see, there are different processes occurring at the same time, for example: while producer sends messages to the queue the consumer is already listening to the broker and consuming this messages .For that reason the diagram has three swim lanes: producer, broker and consumer.
 
 <div align="center">
