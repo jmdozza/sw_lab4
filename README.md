@@ -42,14 +42,14 @@ We can identify four components and three connectors in the cyc view:
 * ***component-4***: This is a database component and it is in charge of save the messages sent by component-3.
 
 ### Connectors:
-* 
+* ***AMQP Connector***: This connector is present two times in the architecture. It implements AMQP protocol which provides a set of rules for message formatting, routing, and delivery, ensuring consistency across various implementations. We can see this connector between component-2(producer) and component-1(broker) and component-1(broker) and component-3(consumer.)
 
 <div align="center">
   <img src="images/cyc.png" alt="Component and Connector View" width="800">
 </div>
 
 ### Data Flow Diagram
-This diagram shows the asynchronous communication flow between system components:
+This diagram shows the asynchronous communication flow between system components,as you can see, there are different processes occurring at the same time, for example: while producer sends messages to the queue the consumer is already listening to the broker and consuming this messages .For that reason the diagram has three swim lanes: producer, broker and consumer.
 
 <div align="center">
   <img src="images/df.png" alt="Data Flow Diagram of Asynchronous Communication" width="800">
